@@ -1,6 +1,6 @@
 #step 1
 import sqlite3
-
+import os
 
 
 def create_table(connection):
@@ -29,9 +29,15 @@ def select_data(connection):
         print(row)
 
 
-connection = sqlite3.connect("test.db")
-# create_table(connection)
-# insert_data(connection)
+# check if test.db exists
+if not os.path.exists("test.db"):
+    print("creating test.db")
+    connection = sqlite3.connect("test.db")
+    create_table(connection)
+    insert_data(connection)
+else:
+    print("test.db already exists")
+
 
 select_data(connection)
 
@@ -39,3 +45,4 @@ select_data(connection)
 # 1. inserisci nuova riga nella tabell
 # 2. stampa tutta la tabella
 # 3. stampa una riga della tabella in base all'ID
+
