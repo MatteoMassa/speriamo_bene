@@ -1,3 +1,28 @@
+
+# MENU CLI command line interface
+# 1. inserisci nuova riga nella tabell
+# 2. stampa tutta la tabella
+# 3. stampa una riga della tabella in base all'ID
+
+# 1. inserisci nuova riga nella tabella
+# python database.py --insert 4 gianni 34
+
+# 2. stampa tutta la tabella
+# python database.py --print
+
+# 3. stampa una riga della tabella in base all'ID
+# python database.py --print-line 2
+
+
+# MENU CLI: argparse
+
+
+# SITO FLASK
+
+
+
+
+
 #step 1
 import sqlite3
 import os
@@ -40,23 +65,3 @@ else:
 
 
 select_data(connection)
-
-# MENU CLI command line interface
-# 1. inserisci nuova riga nella tabell
-# 2. stampa tutta la tabella
-# 3. stampa una riga della tabella in base all'ID
-
-# 1. inserisci nuova riga nella tabella
-# python database.py --insert 4 gianni 34
-
-# 2. stampa tutta la tabella
-# python database.py --print
-
-# 3. stampa una riga della tabella in base all'ID
-# python database.py --print-line 2
-
-
-# MENU CLI: argparse
-
-
-# SITO FLASK
