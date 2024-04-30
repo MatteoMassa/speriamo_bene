@@ -19,10 +19,6 @@
 
 # SITO FLASK
 
-
-
-
-
 #step 1
 import sqlite3
 import os
