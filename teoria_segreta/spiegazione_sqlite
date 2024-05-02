@@ -42,7 +42,7 @@ cursor.execute('''
         eta INTEGER
     )
 ''')
-
+f
 # Inserimento di dati nella tabella
 cursor.execute('''
     INSERT INTO utenti (nome, cognome, eta)
