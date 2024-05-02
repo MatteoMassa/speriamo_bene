@@ -37,7 +37,7 @@ if not os.path.exists("test.db"):
     insert_data(connection)
 else:
     print("test.db already exists")
-
+    connection = sqlite3.connect("test.db")
 
 select_data(connection)
 
