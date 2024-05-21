@@ -5,22 +5,24 @@ import os
 
 def create_table(connection):
     cursor = connection.cursor()
-    cursor.execute("CREATE TABLE IF NOT EXISTS example (id INTEGER, name TEXT, age INTEGER)")
+    cursor.execute("CREATE TABLE IF NOT EXISTS persone (id INTEGER, name TEXT, age INTEGER)")
+    cursor.execute("CREATE TABLE IF NOT EXISTS asdadsdsa (id INTEGER, name TEXT, age INTEGER)")
     cursor = connection.cursor()
     connection.commit()
 
 def insert_data(connection):
     cursor = connection.cursor()
-    cursor.execute("INSERT INTO example (id, name, age) VALUES (1, 'alice', 20)")
-    cursor.execute("INSERT INTO example VALUES (2, 'bob', 30)")
-    cursor.execute("INSERT INTO example VALUES (3, 'eve', 40)")
+    cursor.execute("INSERT INTO persone (id, name, age) VALUES (1, 'alice', 20)")
+    cursor.execute("INSERT INTO persone VALUES (2, 'bob', 30)")
+    cursor.execute("INSERT INTO persone VALUES (3, 'eve', 40)")
     cursor = connection.cursor()
     connection.commit()
 
 def select_data(connection):
     cursor = connection.cursor()
     # SELECT CustomerName, City FROM Customers;
-    cursor.execute("SELECT name, age FROM example")
+    cursor.execute("SELECT name, age FROM persone")
+    # cursor.execute("SELECT id, name, age FROM persone WHERE id=1")
 
     rows = cursor.fetchall()
     print(type(rows))
