@@ -8,4 +8,4 @@ Interfaccia Grafica:
 ------------------------------------------------------------------
 
 test.db ----> Persone = (id name birth_date hair_color eye_color height_ppl)
-test.db ----> 
+test.db ---->  

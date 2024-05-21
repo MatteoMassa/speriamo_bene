@@ -5,24 +5,31 @@ import os
 
 def create_table(connection):
     cursor = connection.cursor()
-    cursor.execute("CREATE TABLE IF NOT EXISTS persone (id INTEGER, name TEXT, age INTEGER)")
-    cursor.execute("CREATE TABLE IF NOT EXISTS asdadsdsa (id INTEGER, name TEXT, age INTEGER)")
+    cursor.execute("CREATE TABLE IF NOT EXISTS persone (id INTEGER, name TEXT, age DATE, PRIMARY KEY(id)")
+    cursor.execute("CREATE TABLE IF NOT EXISTS economic (id INTEGER, salary TIMESTAMP, Job TEXT, FOREIGN KEY(id) REFERENCES persone(id)")
     cursor = connection.cursor()
     connection.commit()
 
+
+id, salary, job, id
+
 def insert_data(connection):
     cursor = connection.cursor()
-    cursor.execute("INSERT INTO persone (id, name, age) VALUES (1, 'alice', 20)")
-    cursor.execute("INSERT INTO persone VALUES (2, 'bob', 30)")
-    cursor.execute("INSERT INTO persone VALUES (3, 'eve', 40)")
+    cursor.execute("INSERT INTO persone (id, name, age) VALUES (1, 'alice', '2001-03-25')")
+    cursor.execute("INSERT INTO persone VALUES (2, 'bob', '2013-11-01')")
+    cursor.execute("INSERT INTO persone VALUES (3, 'eve', '1978-07-12')")
+
+    cursor.execute("INSERT INTO economic (id, name, age) VALUES (id, 1200, 'Giardiniere')")
+
     cursor = connection.cursor()
     connection.commit()
 
 def select_data(connection):
     cursor = connection.cursor()
-    # SELECT CustomerName, City FROM Customers;
+
     cursor.execute("SELECT name, age FROM persone")
-    # cursor.execute("SELECT id, name, age FROM persone WHERE id=1")
+    
+    #cursor.execute("SELECT * FROM economic")
 
     rows = cursor.fetchall()
     print(type(rows))
@@ -62,3 +69,25 @@ select_data(connection)
 
 
 # SITO FLASK
+
+
+
+
+
+CREATE TABLE IF NOT EXISTS persone 
+(
+    id INTEGER, 
+    name TEXT, 
+    age DATE, 
+)
+
+
+CREATE TABLE IF NOT EXISTS economic
+(
+    id INTEGER, 
+    salary TIMESTAMP, 
+    Job TEXT, 
+    persona_id INTEGER,
+    PRIMARY KEY (id),
+    FOREIGN KEY (persona_id) REFERENCES persone(id)
+);
