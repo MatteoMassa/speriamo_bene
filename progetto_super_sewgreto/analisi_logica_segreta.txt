@@ -1,0 +1,20 @@
+*Work in progress*
+
+Il Progetto è basato su un esempio della gestione del database
+
+-----------------------------------------------------------------
+Interfaccia Grafica
+Scegliere cosa eseguire
+1.Intera riga da Aggiungere dati nella tabella Persone
+2.Dato singolo da aggiungere nella tabella Persone
+3.Calcolo Codice Fiscale + inserimento nella tabella Persone
+4.Eliminazione di una riga nella tabella persone, sincronizzata alla tabella entrate 
+5.Esci
+------------------------------------------------------------------
+
+test.db ----> Persone = (id name birth_date hair_color eye_color height_ppl ecc..) Primary key id con AUTOINCREMENT
+test.db ----> Entrate =(person_id. economic_id, job, salary, IRPEF) Costituita Da una foreign key nel person id
+e Primary key economic_id con l'aggiunta di AUTOINCREMENT
+
+Ho lasciato molti commenti nel codice appositamente per vedere lo sviluppo del progetto e le modifiche
+apportate.

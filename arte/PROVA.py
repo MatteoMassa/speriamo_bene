@@ -267,6 +267,3 @@ while True:
         print("Sei uscito correttamente")
         break
                 
-
-
-
