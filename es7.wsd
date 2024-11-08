@@ -1,0 +1,53 @@
+@startuml
+class MaterialeBiblioteca {
+    - titolo: String
+    - anno_pubblicazione: int
+    - disponibile: boolean
+
+    + getTitolo(): String
+    + setTitolo(titolo: String): void
+    + getAnnoPubblicazione(): int
+    + setAnnoPubblicazione(anno: int): void
+    + isDisponibile(): boolean
+    + setDisponibile(disponibile: boolean): void
+    + prestito(): void
+    + restituzione(): void
+    + ricerca(titolo: String, anno: int): List<MaterialeBiblioteca>
+}
+
+class Libro {
+    - autore: String
+    - numero_pagine: int
+
+    + getAutore(): String
+    + setAutore(autore: String): void
+    + getNumeroPagine(): int
+    + setNumeroPagine(numero: int): void
+}
+
+class Rivista {
+    - numero_edizione: int
+    - mese_pubblicazione: String
+
+    + getNumeroEdizione(): int
+    + setNumeroEdizione(numero: int): void
+    + getMesePubblicazione(): String
+    + setMesePubblicazione(mese: String): void
+}
+
+class DVD {
+    - regista: String
+    - durata: int
+
+    + getRegista(): String
+    + setRegista(regista: String): void
+    + getDurata(): int
+    + setDurata(durata: int): void
+}
+
+
+MaterialeBiblioteca  <|-- Libro
+MaterialeBiblioteca  <|--  Rivista
+MaterialeBiblioteca  <|--  DVD
+
+@enduml

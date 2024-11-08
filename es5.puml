@@ -1,0 +1,27 @@
+@startuml es5
+
+class Dipendente {
+    - nome: string
+    - stipendio: float
+    + getNome(): string
+    + setNome(nome: string): void
+    + getStipendio(): float
+    + setStipendio(stipendio: float): void
+}
+
+class Manager {
+    - numero_di_team: int
+    + getNumeroDiTeam(): int
+    + setNumeroDiTeam(numeroDiTeam: int): void
+}
+
+class Sviluppatore {
+    - linguaggio_di_programmazione: string
+    + getLinguaggioDiProgrammazione(): string
+    + setLinguaggioDiProgrammazione(linguaggioDiProgrammazione: string): void
+}
+
+Dipendente <|-- Manager
+Dipendente <|-- Sviluppatore
+
+@enduml

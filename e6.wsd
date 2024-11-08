@@ -1,0 +1,23 @@
+@startuml e6
+
+class Pagamento {
+    + processa_pagamento()
+}
+
+class CartaDiCredito {
+}
+
+class PayPal {
+    +email: str
+    +password: str
+}
+
+annotation Main {
+    + effettua_pagamento(Pagamento pagamento)
+}
+
+Pagamento <|-- CartaDiCredito
+Pagamento <|-- PayPal
+Main --> Pagamento
+
+@enduml
