@@ -1,0 +1,63 @@
+@startuml
+
+class Piatto {
+    -nome: str
+    -prezzo: float
+    -disponibile: bool
+    +__init__(nome: str, prezzo: float)
+    +get_nome(): str
+    +set_nome(nome: str)
+    +get_prezzo(): float
+    +set_prezzo(prezzo: float)
+    +is_disponibile(): bool
+    +set_disponibile(disponibile: bool)
+    +ordina()
+    +non_disponi()
+}
+
+class Antipasto {
+    -ingrediente: list
+    -porzione: str
+    +__init__(nome: str, prezzo: float, ingrediente: list, porzione: str)
+    +get_ingrediente(): list
+    +set_ingrediente(ingrediente: list)
+    +get_porzione(): str
+    +set_porzione(porzione: str)
+}
+
+class Primo {
+    -tipo_pasta: str
+    -sugo: str
+    +__init__(nome: str, prezzo: float, tipo_pasta: str, sugo: str)
+    +get_tipo_pasta(): str
+    +set_tipo_pasta(tipo_pasta: str)
+    +get_sugo(): str
+    +set_sugo(sugo: str)
+}
+
+class Secondo {
+    -tipo_carne: str
+    -cottura: str
+    +__init__(nome: str, prezzo: float, tipo_carne: str, cottura: str)
+    +get_tipo_carne(): str
+    +set_tipo_carne(tipo_carne: str)
+    +get_cottura(): str
+    +set_cottura(cottura: str)
+}
+
+class Dolce {
+    -tipo_dolce: str
+    -calorie: int
+    +__init__(nome: str, prezzo: float, tipo_dolce: str, calorie: int)
+    +get_tipo_dolce(): str
+    +set_tipo_dolce(tipo_dolce: str)
+    +get_calorie(): int
+    +set_calorie(calorie: int)
+}
+
+Piatto <|-- Antipasto
+Piatto <|-- Primo
+Piatto <|-- Secondo
+Piatto <|-- Dolce
+
+@enduml

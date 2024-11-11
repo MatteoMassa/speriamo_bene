@@ -50,8 +50,18 @@ def calcola_conto(lista_piatti):
     return totale
 
 # Esempio di utilizzo
-conto = calcola_conto(piatti_ordinati)
-print("Il totale del conto è:", conto)
+
+
+def stampa_menu(lista_piatti):
+    for piatto in lista_piatti:
+        print("Nome:", piatto.get_nome())
+        print("Prezzo:", piatto.get_prezzo())
+        print("Disponibile:", piatto.is_disponibile())
+        print()
+
+
+
+    
 
 
 
@@ -144,7 +154,9 @@ if not esito:
 else:
     print("Il piatto è stato trovato.")
 
+print(stampa_menu(piatti_ordinati))
 
 
-
+conto = calcola_conto(piatti_ordinati)
+print("Il totale del conto è:", conto)
 
