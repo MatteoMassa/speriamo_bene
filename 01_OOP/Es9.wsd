@@ -1,0 +1,23 @@
+@startuml
+class Libro {
+    - titolo: str
+    - autore: str
+    - pagine: int
+    + __init__(_titolo: str, _autore: str, _pagine: int)
+    + get_titolo(): str
+    + set_titolo(_titolo: str)
+    + get_autore(): str
+    + set_autore(_autore: str)
+    + get_pagine(): int
+    + set_pagine(_pagine: int)
+}
+
+Libro : + __init__(_titolo: str, _autore: str, _pagine: int)
+Libro : + get_titolo(): str
+Libro : + set_titolo(_titolo: str)
+Libro : + get_autore(): str
+Libro : + set_autore(_autore: str)
+Libro : + get_pagine(): int
+Libro : + set_pagine(_pagine: int)
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+class Frazione {
+    - num: int
+    - den: int
+    + __init__(num: int, den: int)
+    + __add__(other: Frazione): Frazione
+    + __sub__(other: Frazione): Frazione
+    + __mul__(other: Frazione): Frazione
+    + __str__(): str
+}
+
+@enduml
