@@ -1,0 +1,25 @@
+@startuml Es20
+
+class Camera {
+    - int numero
+    - String tipo
+    - boolean disponibilita
+    + Camera()
+    + getNumero() : int
+    + getTipo() : String
+    + isDisponibile() : boolean
+    + setDisponibilita() : void
+}
+
+class Albergo {
+    - List camere
+    + Albergo()
+    + aggiungiCamera() : void
+    + prenotaCamera() : boolean
+    + visualizzaCamereDisponibili() : List
+    + visualizzaPrenotazioni() : List
+}
+
+Camera "1" *-- "many" Albergo
+
+@enduml
