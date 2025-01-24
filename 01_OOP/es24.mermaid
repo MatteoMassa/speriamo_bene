@@ -1,0 +1,20 @@
+classDiagram
+    class Film {
+        -String titolo
+        -String regista
+        -int annoDiUscita
+        -String genere
+        -int valutazione
+    }
+
+    class Libreria {
+        -List films
+        +aggiungi_Film()
+        +cerca_Film_Per_Titolo()
+        +cerca_Film_Per_Regista()
+        +visualizza_Tutti_Film()
+        +calcola_Valutazione_Media()
+    }
+
+    Film "1" --> "*" Film : "sequel_of"
+    Libreria "1" --> "*" Film : contiene

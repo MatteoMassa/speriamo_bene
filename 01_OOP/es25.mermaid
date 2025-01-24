@@ -1,0 +1,49 @@
+classDiagram
+    class Prenotazione {
+        +String nome_Cliente
+        +String data_Ora
+        +int numero_Persone
+        +String stato 
+    }
+
+    class Ristorante {
+        +list prenotazioni
+        +aggiungi_Prenotazione()
+        +cerca_Prenotazione_Per_Nome_Cliente_O_Data()
+        +visualizza_Tutte_Prenotazioni()
+        +cancella_Prenotazione()
+    }
+
+    Prenotazione "1" --> "*" Prenotazione : "sequel_of"
+    Ristorante "1" --> "*" Prenotazione : contiene
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%Gestire le prenotazioni in un ristorante. Ogni prenotazione ha un nome del cliente, una data e ora, un numero di persone e uno stato (confermata, in attesa, cancellata). Il sistema deve permettere di:
+%%Aggiungere nuove prenotazioni.
+%%Cercare prenotazioni per nome del cliente o data.
+%%Visualizzare tutte le prenotazioni.
+%%Cancellare una prenotazione.
+%%Il sistema deve includere due classi principali:
+%%: rappresenta una singola prenotazione nel ristorante.
+%%: gestisce le prenotazioni e le operazioni associate.

@@ -1,0 +1,58 @@
+
+classDiagram
+
+    class Prodotto {
+        -int ID
+        -string nome
+        -string descrizione
+        -double prezzo
+        -string categoria
+    }
+    class Cliente {
+        -int ID
+        -string nome
+        -string cognome
+        -string email
+        -string indirizzo
+    }
+    class Ordine {
+        -int ID
+        -string dataOrdine
+        -string dataConsegna
+        -string stato
+    }
+    class Recensione {
+        -int ID
+        -int punteggio
+        -string data
+        -string commento
+    }
+    Prodotto "1" -- "*" Ordine : acquistato
+    Cliente "1" -- "*" Ordine : effettua
+    Prodotto "1" -- "*" Recensione : recensito
+    Cliente "1" -- "*" Recensione : scrive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
